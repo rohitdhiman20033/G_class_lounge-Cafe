@@ -41,6 +41,11 @@ h1,h2,h3{
     box-shadow:0 0 20px #D4AF37;
 }
 
+html,
+body{
+    overflow-x: hidden;
+}
+
 
 /*Scrollbar */
 
