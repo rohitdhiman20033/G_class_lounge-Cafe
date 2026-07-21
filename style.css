@@ -1,0 +1,71 @@
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b0b0b;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#home{
+    background-size: 105%;
+    animation: heroZoom 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+    from{
+        background-size:105%;
+    }
+
+    to{
+        background-size:112%;
+    }
+}
+
+h1,h2,h3{
+    font-family:'Cinzel',serif;
+}
+
+.gold{
+    color:#D4AF37;
+}
+
+.btn-gold{
+    background:#D4AF37;
+    color:black;
+    transition:.3s;
+}
+
+.btn-gold:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #D4AF37;
+}
+
+
+/*Scrollbar */
+
+
+#cart-items::-webkit-scrollbar{
+    width:8px;
+}
+
+#cart-items::-webkit-scrollbar-track{
+    background:#111111;
+    border-radius:20px;
+}
+
+#cart-items::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg,#D4AF37,#B8860B);
+    border-radius:20px;
+    border:2px solid #111111;
+}
+
+#cart-items::-webkit-scrollbar-thumb:hover{
+    background:#FFD700;
+}
+
+#cart-items{
+    scrollbar-width:thin;
+    scrollbar-color:#D4AF37 #111111;
+}
+

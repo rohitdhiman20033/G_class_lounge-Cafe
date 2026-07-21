@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="min-h-screen bg-[#0b0b0b] py-20 px-5">
+
+        <div class="max-w-4xl mx-auto">
+
+            <h1 class="text-5xl text-center text-[#D4AF37] font-bold">
+
+                My Orders
+
+            </h1>
+
+            <div class="text-center mt-6">
+
+                <a href="index.html"
+                    class="inline-block bg-[#D4AF37] text-black px-8 py-3 rounded-xl font-bold hover:bg-[#b8962e] transition duration-300">
+
+                    ← Back to Website
+
+                </a>
+
+            </div>
+
+            <p class="text-center text-gray-400 mt-4">
+
+                Enter your phone number to view your orders
+
+            </p>
+
+            <div class="mt-10 flex flex-col md:flex-row gap-4">
+
+                <input id="search-phone" type="text" placeholder="Enter Phone Number"
+                    class="flex-1 bg-[#171412] border border-[#D4AF37]/20 rounded-xl p-4 text-white outline-none">
+
+                <button onclick="searchOrders()" class="bg-[#D4AF37] text-black px-8 rounded-xl font-bold">
+
+                    View Orders
+
+                </button>
+
+            </div>
+
+            <div id="orders-list" class="grid md:grid-cols-2 gap-8 mt-12">
+
+            </div>
+
+            <h2 class="text-4xl text-[#D4AF37] font-bold text-center mt-16">
+
+                My Table Bookings
+
+            </h2>
+
+            <div id="bookings-list" class="grid md:grid-cols-2 gap-8 mt-10">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function searchOrders() {
+
+            let phone = document.getElementById("search-phone").value.trim();
+
+            if (phone === "") {
+
+                alert("Please enter your phone number");
+                return;
+
+            }
+
+            // =======================
+            // ORDERS
+            // =======================
+
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+            let orderContainer = document.getElementById("orders-list");
+
+            orderContainer.innerHTML = "";
+
+            let userOrders = orders.filter(order => order.phone === phone);
+
+            if (userOrders.length === 0) {
+
+                orderContainer.innerHTML = `
+
+        <div class="col-span-full text-center text-gray-400">
+
+            <h2 class="text-3xl">
+                No Orders Found
+            </h2>
+
+        </div>
+
+        `;
+
+            }
+
+            else {
+
+                userOrders.forEach(order => {
+
+                    let itemsHTML = "";
+
+                    order.items.forEach(item => {
+
+                        itemsHTML += `
+
+                <div class="flex justify-between items-center bg-white/5 rounded-xl p-3">
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="text-xl">☕</span>
+
+                        <p class="text-gray-200">${item.name}</p>
+
+                    </div>
+
+                    <span class="text-[#D4AF37] font-bold">
+
+                        x${item.quantity}
+
+                    </span>
+
+                </div>
+
+                `;
+
+                    });
+
+                    orderContainer.innerHTML += `
+
+            <div class="bg-gradient-to-br from-[#171412] to-black border border-[#D4AF37]/30 rounded-3xl p-6">
+
+                <div class="flex justify-between items-center">
+
+                    <div>
+
+                        <h2 class="text-2xl text-[#D4AF37] font-bold">
+
+                            Order #${order.id}
+
+                        </h2>
+
+                        <p class="text-gray-400 mt-2">
+
+                            ${order.date} • ${order.time}
+
+                        </p>
+
+                    </div>
+
+                    <span class="px-4 py-1 rounded-full text-sm font-bold
+                    ${order.status === "Pending"
+                            ? "bg-yellow-400/20 text-yellow-400"
+                            : order.status === "Preparing"
+                                ? "bg-blue-400/20 text-blue-400"
+                                : "bg-green-400/20 text-green-400"}">
+
+                        ${order.status}
+
+                    </span>
+
+                </div>
+
+                <div class="mt-6 border-t border-[#D4AF37]/20 pt-5">
+
+                    <div class="mb-5">
+
+                        <p class="text-gray-400 text-sm">
+
+                            Customer
+
+                        </p>
+
+                        <p class="text-white font-semibold">
+
+                            ${order.customerName}
+
+                        </p>
+
+                    </div>
+
+                    <div class="space-y-3">
+
+                        ${itemsHTML}
+
+                    </div>
+
+                </div>
+
+                <div class="mt-6 border-t border-[#D4AF37]/20 pt-4 flex justify-between">
+
+                    <span class="text-gray-400">
+
+                        Total Amount
+
+                    </span>
+
+                    <span class="text-2xl font-bold text-[#D4AF37]">
+
+                        ₹${order.total}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            `;
+
+                });
+
+            }
+
+            // =======================
+            // BOOKINGS
+            // =======================
+
+            let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+            let bookingContainer = document.getElementById("bookings-list");
+
+            bookingContainer.innerHTML = "";
+
+            let userBookings = bookings.filter(booking => booking.phone === phone);
+
+            if (userBookings.length === 0) {
+
+                bookingContainer.innerHTML = `
+
+        <div class="col-span-full text-center text-gray-500">
+
+            <h3 class="text-2xl">
+
+                No Table Bookings Found
+
+            </h3>
+
+        </div>
+
+        `;
+
+            }
+
+            else {
+
+                userBookings.forEach(booking => {
+
+                    bookingContainer.innerHTML += `
+
+            <div class="bg-gradient-to-br from-[#171412] to-black border border-[#D4AF37]/30 rounded-3xl p-6">
+
+                <div class="flex justify-between items-center">
+
+                    <h2 class="text-2xl text-[#D4AF37] font-bold">
+
+                        Table Booking
+
+                    </h2>
+
+                    <span class="px-4 py-1 rounded-full text-sm font-bold
+                    ${booking.status === "Pending"
+                            ? "bg-yellow-400/20 text-yellow-400"
+                            : booking.status === "Confirmed"
+                                ? "bg-green-400/20 text-green-400"
+                                : "bg-red-400/20 text-red-400"}">
+
+                        ${booking.status || "Pending"}
+
+                    </span>
+
+                </div>
+
+                <div class="mt-5 space-y-2">
+
+                    <p class="text-white">
+
+                        👤 ${booking.name}
+
+                    </p>
+
+                    <p class="text-gray-400">
+
+                        📞 ${booking.phone}
+
+                    </p>
+
+                    <p class="text-gray-400">
+
+                        📅 ${booking.date}
+
+                    </p>
+
+                    <p class="text-gray-400">
+
+                        🕒 ${booking.time}
+
+                    </p>
+
+                    <p class="text-gray-400">
+
+                        👥 ${booking.guests}
+
+                    </p>
+
+                    <p class="text-gray-400">
+
+                        📝 ${booking.description || "No Special Request"}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            `;
+
+                });
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

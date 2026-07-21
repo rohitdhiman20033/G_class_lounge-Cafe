@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>G-Class Lounge</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 bg-black  border-b border-[#d4af37]/20 transition-all duration-500  ">
+
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-2 py-1">
+
+            <a href="#home" id="logo" class="flex items-center gap-3">
+
+                <img src="images/logo chai.jpeg" alt="G-Class Lounge Logo" class="w-20 h-20 object-contain">
+
+                <div class="leading-tight">
+
+                    <h1 class="text-2xl font-bold gold tracking-wider m-0">
+                        G-Class Lounge
+                    </h1>
+
+
+
+                    <p class="text-[10px] text-gray-400 tracking-[2px]  uppercase">
+                        Luxury Chai Cafe
+                    </p>
+
+                </div>
+
+            </a>
+
+            <ul class="hidden md:flex gap-10 text-white font-medium">
+
+                <li>
+                    <a href="#home"
+                        class="nav-link text-[#D4AF37] border-b-2 border-[#D4AF37] pb-2 transition all duration-300">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu" class="nav-link hover:text-[#D4AF37] transition all duration-300">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#gallery" class="nav-link hover:text-[#D4AF37] transition all duration-300">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#events" class="nav-link hover:text-[#D4AF37] transition all duration-300">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#reviews" class="nav-link hover:text-[#D4AF37] transition all duration-300">
+                        Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-link hover:text-[#D4AF37] transition all duration-300">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="myorders.html" class="hover:text-[#D4AF37] transition-all duration-300">
+
+                        My Orders
+
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+            <div class="flex items-center gap-4">
+
+                <!-- Cart -->
+
+                <div class="relative cursor-pointer">
+
+                    <i class="fa-solid fa-cart-shopping text-2xl text-[#D4AF37]"></i>
+
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+
+                        0
+
+                    </span>
+
+                </div>
+
+
+
+
+
+
+                <a href="#booking"
+                    class="hidden md:block border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-lg hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+
+                    Book Table
+
+                </a>
+
+
+
+
+
+                <!-- Mobile Hamburger -->
+
+                <button id="menu-btn" class="md:hidden text-[#D4AF37] text-3xl">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed top-[88px] left-0 w-full bg-black border-t border-[#D4AF37]/20 z-[9998]">
+
+        <a href="#home" class="block px-6 py-4 text-white mobile-link">Home</a>
+
+        <a href="#menu" class="block px-6 py-4 text-white mobile-link">Menu</a>
+
+        <a href="#gallery" class="block px-6 py-4 text-white mobile-link">Gallery</a>
+
+        <a href="#events" class="block px-6 py-4 text-white mobile-link">Events</a>
+
+        <a href="#reviews" class="block px-6 py-4 text-white mobile-link">Reviews</a>
+
+        <a href="#contact" class="block px-6 py-4 text-white mobile-link">Contact</a>
+
+        <a href="myorders.html" class="block px-6 py-4 text-white mobile-link">
+
+            My Orders
+
+        </a>
+
+        <a href="#booking" class="block px-6 py-4 text-white mobile-link">Book Table</a>
+
+        <button onclick="openAdmin()" class="block w-full text-left px-6 py-4 text-[#D4AF37]">
+
+            Admin
+
+        </button>
+
+    </div>
+
+    <!-- Hero -->
+
+    <section id="home"
+        class="relative mt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center overflow-hidden"
+        style="background-image:url('images/hero\ img.jpeg');">
+
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+
+            <div class="max-w-2xl ml-12">
+
+                <p class="uppercase tracking-[6px] text-[#d4af37] mb-4">
+                    Experience • Relax • Enjoy
+                </p>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-none">
+
+                    IT'S NOT JUST CHAI,<br>
+
+                    IT'S AN <span class="gold">EXPERIENCE.</span>
+
+                </h1>
+
+                <div class="w-24 h-1 bg-[#d4af37] rounded-full mt-6 mb-6"></div>
+
+                <p class="text-gray-300 mt-8 max-w-xl text-lg">
+
+                    Premium handcrafted chai, elegant interiors, and a luxury cafe experience inspired by
+                    sophistication.
+
+                </p>
+
+                <div class="mt-10 flex gap-5">
+
+                    <a href="#menu"
+                        class="btn-gold px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300">
+                        Explore Menu
+                    </a>
+
+                    <a href="#events"
+                        class="border border-[#d4af37] text-[#d4af37] px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#d4af37] hover:text-black hover:scale-105 transition-all duration-300">
+                        Our Events
+                    </a>
+
+                </div>
+
+
+
+                <div class="mt-12 mb-24 flex flex-wrap gap-12 text-white">
+
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-[#D4AF37]">50+</h2>
+                        <p class="text-gray-400">Premium Drinks</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-[#D4AF37]">10K+</h2>
+                        <p class="text-gray-400">Happy Customers</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-[#D4AF37]">4.9★</h2>
+                        <p class="text-gray-400">Google Rating</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Feature Bar -->
+
+    <section class="relative -mt-20 mx-auto z-20 w-[80%] text-center">
+
+        <div class="max-w-7xl mx-auto bg-[#171412] rounded-3xl shadow-2xl border border-yellow-600/20 px-10 py-8">
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+
+                <div>
+                    <i class="fa-solid fa-mug-hot text-[#d4af37] text-2xl"></i>
+                    <p class="text-white mt-2">Premium Chai</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-cookie-bite text-[#d4af37] text-2xl"></i>
+                    <p class="text-white mt-2">Tasty Bites</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-couch text-[#d4af37] text-2xl"></i>
+                    <p class="text-white mt-2">Luxury Lounge</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-music text-[#d4af37] text-2xl"></i>
+                    <p class="text-white mt-2">Live Music</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-wifi text-[#d4af37] text-2xl"></i>
+                    <p class="text-white mt-2">Free Wi-Fi</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OUR SPECIALITIES -->
+
+    <section id="Specialities" class="from-[#0b0b0b] via-[#111111] to-[#181818] py-20">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Signature Collection
+            </p>
+
+            <h2 class="text-center text-5xl font-bold text-white mt-3">
+                Our Specialities
+            </h2>
+
+            <div class="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full mt-5 mb-14"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Card 1 -->
+
+                <div
+                    class="group bg-[#171412] border border-[#d4af37]/20 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-4 hover:shadow-[0_25px_60px_rgba(212,175,55,0.35)] hover:border-[#d4af37] transition-all duration-500 flex flex-col">
+
+                    <div class="relative">
+
+                        <div class="overflow-hidden">
+
+                            <img src="images/masala chai menu.png"
+                                class="w-full h-72 object-cover group-hover:scale-110 duration-500">
+
+                        </div>
+
+
+
+                        <span
+                            class="absolute top-4 left-4 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-semibold">
+
+                            Best Seller
+
+                        </span>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-1">
+
+                        <h3
+                            class="text-3xl text-white font-semibold group-hover:text-[#D4AF37] transition-all duration-300">
+
+                            Classic Masala Chai
+
+                        </h3>
+
+                        <p class="text-gray-400 mt-3">
+
+                            Traditional Indian tea with premium spices.
+
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-4">
+
+                            <span class="text-yellow-500 text-lg">
+                                ★★★★★
+                            </span>
+
+                            <span class="text-gray-500 text-sm">
+                                (4.9)
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            ⭐ Trusted by 1200+ Customers
+                        </p>
+
+                        <div class="flex justify-between items-center mt-auto pt-6">
+
+                            <span class="text-3xl font-bold text-[#D4AF37]">
+
+                                ₹49
+
+                            </span>
+
+                            <button onclick="addSpecialityToCart(1,'Classic Masala Chai',49,'masala chai menu.png')"
+                                class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- card-2 -->
+
+                <div
+                    class="group bg-[#171412] border border-[#d4af37]/20 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-4 hover:shadow-[0_25px_60px_rgba(212,175,55,0.35)] hover:border-[#d4af37] transition-all duration-500 flex flex-col">
+
+                    <div class="relative">
+
+                        <div class="overflow-hidden">
+
+                            <img src="images/ginger menu.png"
+                                class="w-full h-72 object-cover group-hover:scale-110 duration-500">
+
+                        </div>
+
+
+
+                        <span
+                            class="absolute top-4 left-4 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-semibold">
+
+                            Best Seller
+
+                        </span>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-1">
+
+                        <h3
+                            class="text-3xl text-white font-semibold group-hover:text-[#D4AF37] transition-all duration-300">
+
+                            Ginger Chai
+
+                        </h3>
+
+                        <p class="text-gray-400 mt-3">
+
+                            Traditional Indian tea with premium spices.
+
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-4">
+
+                            <span class="text-yellow-500 text-lg">
+                                ★★★★★
+                            </span>
+
+                            <span class="text-gray-500 text-sm">
+                                (4.9)
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            ⭐ Trusted by 1200+ Customers
+                        </p>
+
+                        <div class="flex justify-between items-center mt-auto pt-6">
+
+                            <span class="text-3xl font-bold text-[#D4AF37]">
+
+                                ₹59
+
+                            </span>
+
+                            <button onclick="addSpecialityToCart(2,'Ginger Chai',59,'ginger menu.png')"
+                                class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- card-3 -->
+                <div
+                    class="group bg-[#171412] border border-[#d4af37]/20 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-4 hover:shadow-[0_25px_60px_rgba(212,175,55,0.35)] hover:border-[#d4af37] transition-all duration-500 flex flex-col">
+
+                    <div class="relative">
+
+                        <div class="overflow-hidden">
+
+                            <img src="images/kesar chai.png"
+                                class="w-full h-72 object-cover group-hover:scale-110 duration-500">
+
+                        </div>
+
+
+
+                        <span
+                            class="absolute top-4 left-4 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-semibold">
+
+                            Best Seller
+
+                        </span>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-1">
+
+                        <h3
+                            class="text-3xl text-white font-semibold group-hover:text-[#D4AF37] transition-all duration-300">
+
+                            Kesar Chai
+
+                        </h3>
+
+                        <p class="text-gray-400 mt-3">
+
+                            Traditional Indian tea with premium spices.
+
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-4">
+
+                            <span class="text-yellow-500 text-lg">
+                                ★★★★★
+                            </span>
+
+                            <span class="text-gray-500 text-sm">
+                                (4.9)
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            ⭐ Trusted by 1200+ Customers
+                        </p>
+
+                        <div class="flex justify-between items-center mt-auto pt-6">
+
+                            <span class="text-3xl font-bold text-[#D4AF37]">
+
+                                ₹69
+
+                            </span>
+
+                            <button
+                                onclick="addSpecialityToCart(3,'Kesar Chai',69,'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=800')"
+                                class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- card-4 -->
+                <div
+                    class="group bg-[#171412] border border-[#d4af37]/20 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-4 hover:shadow-[0_25px_60px_rgba(212,175,55,0.35)] hover:border-[#d4af37] transition-all duration-500 flex flex-col">
+
+                    <div class="relative">
+
+                        <div class="overflow-hidden">
+
+                            <img src="images/chocolate chai.png"
+                                class="w-full h-72 object-cover group-hover:scale-110 duration-500">
+
+                        </div>
+
+
+
+                        <span
+                            class="absolute top-4 left-4 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-semibold">
+
+                            Best Seller
+
+                        </span>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-1">
+
+                        <h3
+                            class="text-3xl text-white font-semibold group-hover:text-[#D4AF37] transition-all duration-300">
+
+                            Chocolate Chai
+
+                        </h3>
+
+                        <p class="text-gray-400 mt-3">
+
+                            Traditional Indian tea with premium spices.
+
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-4">
+
+                            <span class="text-yellow-500 text-lg">
+                                ★★★★★
+                            </span>
+
+                            <span class="text-gray-500 text-sm">
+                                (4.9)
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            ⭐ Trusted by 1200+ Customers
+                        </p>
+
+                        <div class="flex justify-between items-center mt-auto pt-6">
+
+                            <span class="text-3xl font-bold text-[#D4AF37]">
+
+                                ₹79
+
+                            </span>
+
+                            <button
+                                onclick="addSpecialityToCart(4,'Chocolate Chai',79,'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800')"
+                                class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT G-CLASS LOUNGE -->
+
+    <section class="bg-black py-24">
+
+        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+
+
+
+            <div class="relative">
+
+                <img src="images/interior 2.jpeg"
+                    class="w-full h-[600px] object-cover object-center rounded-3xl border border-[#d4af37]/30">
+
+                <div class="absolute bottom-6 left-6 bg-[#171412] border border-[#d4af37]/30 px-8 py-5 rounded-2xl">
+
+                    <h2 class="text-4xl font-bold text-[#D4AF37]">
+                        10+
+                    </h2>
+
+                    <p class="text-gray-300">
+                        Years of Luxury Experience
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <p class="uppercase tracking-[5px] text-[#D4AF37]">
+                    Luxury Chai Experience
+                </p>
+
+                <h2 class="text-5xl font-bold text-white mt-4 leading-tight">
+                    Every Sip Deserves
+                    A Premium Experience
+                </h2>
+
+                <p class="text-gray-400 mt-8 leading-8 text-lg">
+
+                    At G-Class Lounge we don't just serve chai.
+                    We create memorable moments with handcrafted tea,
+                    elegant interiors and unmatched hospitality.
+
+                </p>
+
+
+
+                <div class="space-y-6 mt-10">
+
+                    <div class="flex items-center gap-5">
+
+                        <i class="fa-solid fa-mug-hot text-[#D4AF37] text-2xl"></i>
+
+                        <div>
+
+                            <h3 class="text-white text-xl font-semibold">
+                                Premium Chai
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Freshly brewed with rich ingredients.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-5">
+
+                        <i class="fa-solid fa-couch text-[#D4AF37] text-2xl"></i>
+
+                        <div>
+
+                            <h3 class="text-white text-xl font-semibold">
+                                Luxury Interior
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Elegant ambience inspired by premium lounges.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-5">
+
+                        <i class="fa-solid fa-star text-[#D4AF37] text-2xl"></i>
+
+                        <div>
+
+                            <h3 class="text-white text-xl font-semibold">
+                                Customer Satisfaction
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Loved by thousands of chai lovers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="mt-12 bg-[#D4AF37] text-black px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300">
+
+                    Explore More
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="[#0b0b0b] py-24">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Luxury Moments
+            </p>
+
+            <h2 class="text-center text-5xl font-bold text-white mt-4">
+                Our Gallery
+            </h2>
+
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mt-6 leading-7">
+                Discover the luxurious ambience, handcrafted chai moments, and premium interiors that make every visit
+                unforgettable.
+            </p>
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[320px]">
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl cursor-pointer border border-transparent hover:border-[#d4af37] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)] transition-all duration-500">
+
+                    <img src="images/interior gallery.jpeg"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ease-in-out rounded-3xl group-hover:brightness-75 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] hover:-translate-y-2">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent  opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 flex flex-col items-center justify-center">
+
+                        <i
+                            class="fa-solid fa-expand text-[#D4AF37] text-3xl mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></i>
+
+                        <h3
+                            class="text-white text-2xl font-semibold group-hover:-translate-y-1 transition-all duration-500">
+                            Luxury Interior
+                        </h3>
+
+                        <p class="text-gray-300 text-sm mt-2 group-hover:text-white transition-all duration-500">
+                            Premium Ambience
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl cursor-pointer border border-transparent hover:border-[#d4af37] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)]  transition-all duration-500">
+
+                    <img src="images/signature chai gallery.jpeg"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ease-in-out rounded-3xl group-hover:brightness-75 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] hover:-translate-y-2">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent  opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 flex flex-col items-center justify-center">
+
+                        <i
+                            class="fa-solid fa-expand text-[#D4AF37] text-3xl mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></i>
+
+                        <h3
+                            class="text-white text-2xl font-semibold group-hover:-translate-y-1 transition-all duration-500">
+                            Signature Chai
+                        </h3>
+
+                        <p class="text-gray-300 text-sm mt-2 group-hover:text-white transition-all duration-500">
+                            premium masala chai
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 cursor-pointer border border-transparent hover:border-[#d4af37] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)]  transition-all duration-500">
+
+                    <img src="images/evening gallery.jpeg"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ease-in-out rounded-3xl group-hover:brightness-75 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] hover:-translate-y-2">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent  opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 flex flex-col items-center justify-center">
+
+                        <i
+                            class="fa-solid fa-expand text-[#D4AF37] text-3xl mb-4cgroup-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></i>
+
+                        <h3
+                            class="text-white text-2xl font-semibold group-hover:-translate-y-1 transition-all duration-500">
+                            Evening Ambience
+                        </h3>
+
+                        <p class="text-gray-300 text-sm mt-2 group-hover:text-white transition-all duration-500">
+                            luxury cafe night ambience warm lights
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl cursor-pointer border border-transparent hover:border-[#d4af37] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)]  transition-all duration-500">
+
+                    <img src="images/music gallery.jpeg"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ease-in-out rounded-3xl group-hover:brightness-75 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] hover:-translate-y-2">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent  opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 flex flex-col items-center justify-center">
+
+                        <i
+                            class="fa-solid fa-expand text-[#D4AF37] text-3xl mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></i>
+
+                        <h3
+                            class="text-white text-2xl font-semibold group-hover:-translate-y-1 transition-all duration-500">
+                            Live Music
+                        </h3>
+
+                        <p class="text-gray-300 text-sm mt-2 group-hover:text-white transition-all duration-500">
+                            acoustic live music cafe
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-3xl cursor-pointer border border-transparent hover:border-[#d4af37] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)]  transition-all duration-500">
+
+                    <img src="images/dinning gallery.jpeg"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ease-in-out rounded-3xl group-hover:brightness-75 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] hover:-translate-y-2">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 flex flex-col items-center justify-center">
+
+                        <i
+                            class="fa-solid fa-expand text-[#D4AF37] text-3xl mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></i>
+
+                        <h3
+                            class="text-white text-2xl font-semibold group-hover:-translate-y-1 transition-all duration-500">
+                            Premium Dinning
+                        </h3>
+
+                        <p class="text-gray-300 text-sm mt-2 group-hover:text-white transition-all duration-500">
+                            luxury cafe dessert table
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="text-center mt-14">
+
+                <button
+                    class="group bg-[#D4AF37] text-black px-10 py-4 rounded-full font-semibold hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,55,0.45)] transition-all duration-300">
+
+                    View Full Gallery
+
+                    <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-all duration-300"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LUXURY MENU -->
+
+    <section id="menu" class="bg-gradient-to-b from-[#0b0b0b] to-[#171412] py-24">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Premium Selection
+            </p>
+
+            <h2 class="text-center text-5xl font-bold text-white mt-4">
+                Our Luxury Menu
+            </h2>
+
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mt-6 leading-7">
+                Explore our handcrafted beverages and delicious bites prepared with premium ingredients.
+            </p>
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 mb-14"></div>
+
+            <div class="max-w-md mx-auto my-10">
+
+                <div class="relative">
+
+                    <input type="text" id="searchInput" placeholder="Search your favourite item..."
+                        class="w-full bg-[#171412] border border-[#D4AF37]/30 rounded-full py-4 pl-14 pr-5 text-white placeholder:text-gray-400 outline-none focus:border-[#D4AF37] transition-all duration-300">
+
+                    <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-center flex-wrap gap-5 mb-16">
+
+                <button id="all-btn" class="menu-btn bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold">
+                    All
+                </button>
+
+                <button id="chai-btn"
+                    class="menu-btn border border-[#D4AF37] text-[#D4AF37] px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    Chai
+                </button>
+
+                <button id="coffee-btn"
+                    class="menu-btn border border-[#D4AF37] text-[#D4AF37] px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    Coffee
+                </button>
+
+                <button id="snacks-btn"
+                    class="menu-btn border border-[#D4AF37] text-[#D4AF37] px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    Snacks
+                </button>
+
+                <button id="desserts-btn"
+                    class="menu-btn border border-[#D4AF37] text-[#D4AF37] px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    Desserts
+                </button>
+
+            </div>
+
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            </div>
+
+            <div id="toast"
+                class="fixed bottom-8 right-8 translate-y-32 opacity-0 bg-[#171412] border border-[#D4AF37] text-white px-6 py-4 rounded-2xl shadow-2xl transition-all duration-500 z-[9999]">
+
+                <span id="toast-message">
+                    Item Added
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EVENTS -->
+
+    <section id="events" class="py-24 bg-[#0b0b0b]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Special Moments
+            </p>
+
+            <h2 class="text-center text-5xl font-bold text-white mt-4">
+                Upcoming Events
+            </h2>
+
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mt-6 leading-7">
+                Experience unforgettable evenings with live music, exclusive celebrations,
+                and luxury gatherings at G Class Lounge.
+            </p>
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Event 1 -->
+
+                <div
+                    class="group bg-[#171412] rounded-3xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/music event.png"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+
+
+                        <span
+                            class="absolute top-5 left-5 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-bold">
+                            Exclusive
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-8">
+
+                        <p class="text-[#D4AF37] tracking-wider">
+                            Every Friday • 7:00 PM
+                        </p>
+
+                        <h3 class="text-3xl text-white font-bold mt-3">
+                            Live Music Night
+                        </h3>
+
+                        <p class="text-gray-400 mt-4 leading-7">
+                            Enjoy soulful performances with premium beverages and a relaxing luxury lounge atmosphere.
+                        </p>
+
+
+                        <button onclick="scrollToBooking()"
+                            class="mt-7 bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
+                            Reserve Your Spot
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- Event 2 -->
+
+                <div
+                    class="group bg-[#171412] rounded-3xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/bitrhday event.png"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+
+
+                        <span
+                            class="absolute top-5 left-5 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-bold">
+                            Premium Event
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-8">
+
+                        <p class="text-[#D4AF37] tracking-wider">
+                            Everyday Available
+                        </p>
+
+                        <h3 class="text-3xl text-white font-bold mt-3">
+                            Private Celebration
+                        </h3>
+
+                        <p class="text-gray-400 mt-4 leading-7">
+                            Celebrate your special moments with elegant décor, delicious cuisine and a premium lounge
+                            experience.
+                        </p>
+
+
+                        <button onclick="scrollToBooking()"
+                            class="mt-7 bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
+                            Reserve Your Spot
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Event 3 -->
+
+                <div
+                    class="group bg-[#171412] rounded-3xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/dining event.png"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+
+
+                        <span
+                            class="absolute top-5 left-5 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-bold">
+                            Premium Experience
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-8">
+
+                        <p class="text-[#D4AF37] tracking-wider">
+                            Everyday Available
+                        </p>
+
+                        <h3 class="text-3xl text-white font-bold mt-3">
+                            Luxury Dining Experience
+                        </h3>
+
+                        <p class="text-gray-400 mt-4 leading-7">
+                            Enjoy an elegant dining experience with premium cuisine, beautiful ambience and exceptional
+                            service.
+                        </p>
+
+
+                        <button onclick="scrollToBooking()"
+                            class="mt-7 bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
+                            Reserve Your Spot
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Event 4 -->
+
+                <div
+                    class="group bg-[#171412] rounded-3xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(212,175,55,0.35)] transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/coffee event.png"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+
+
+                        <span
+                            class="absolute top-5 left-5 bg-[#D4AF37] text-black px-4 py-1 rounded-full text-sm font-bold">
+                            Exclusive Event
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-8">
+
+                        <p class="text-[#D4AF37] tracking-wider">
+                            Every Sunday • 5:00 PM
+                        </p>
+
+                        <h3 class="text-3xl text-white font-bold mt-3">
+                            Coffee Tasting Evening
+                        </h3>
+
+                        <p class="text-gray-400 mt-4 leading-7">
+                            Discover unique coffee flavours with handcrafted beverages in a calm and luxurious lounge
+                            atmosphere.
+                        </p>
+
+
+                        <button onclick="scrollToBooking()"
+                            class="mt-7 bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
+                            Reserve Your Spot
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOOK TABLE -->
+
+    <section id="booking" class="bg-[#111111] py-24">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Reservation
+            </p>
+
+            <h2 class="text-5xl text-white font-bold text-center mt-4">
+                Book Your Luxury Table
+            </h2>
+
+            <p class="text-center text-gray-400 mt-5 max-w-2xl mx-auto">
+                Reserve your table and enjoy a premium luxury experience at G Class Lounge.
+            </p>
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-6 mb-14"></div>
+
+            <div class="max-w-3xl mx-auto bg-[#171412] border border-[#D4AF37]/20 rounded-3xl p-10">
+
+                <form id="booking-form" class="grid md:grid-cols-2 gap-6">
+
+                    <input type="text" id="name" placeholder="Full Name"
+                        class="bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+
+                    <input type="tel" id="phone" placeholder="Phone Number"
+                        class="bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+
+                    <input type="date" id="date"
+                        class="bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+
+                    <input type="time" id="time"
+                        class="bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+
+                    <select id="guests"
+                        class="bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+
+                        <option value="">Guests</option>
+                        <option>1 Person</option>
+                        <option>2 Persons</option>
+                        <option>3 Persons</option>
+                        <option>4 Persons</option>
+                        <option>5 Persons</option>
+                        <option>6+ Persons</option>
+
+                    </select>
+
+                    <textarea id="description" rows="3" placeholder="Special Request (Optional)"
+ class="md:col-span-2 bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none resize-none overflow-hidden focus:border-[#D4AF37]"></textarea>
+
+
+                    <button type="submit"
+                        class="md:col-span-2 bg-[#D4AF37] text-black rounded-xl py-4 font-bold hover:scale-[1.02] transition-all duration-300">
+
+                        Reserve Table
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- REVIEWS -->
+
+    <section id="reviews" class="py-24 bg-[#0b0b0b]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Customer Love
+            </p>
+
+
+            <h2 class="text-center text-5xl font-bold text-white mt-4">
+                Guest Reviews
+            </h2>
+
+
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mt-6">
+                See what our guests say about their luxury dining experience at G Class Lounge.
+            </p>
+
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 mb-16"></div>
+
+            <!-- Rating Summary -->
+
+            <div
+                class="max-w-md mx-auto mb-16 bg-[#171412] border border-[#D4AF37]/20 rounded-3xl p-8 text-center hover:border-[#D4AF37] transition duration-500">
+
+
+                <h3 class="text-5xl font-bold text-[#D4AF37]">
+                    4.9
+                </h3>
+
+
+                <div class="text-[#D4AF37] text-3xl mt-3">
+                    ★★★★★
+                </div>
+
+
+                <p class="text-gray-400 mt-4">
+                    Based on Guest Experiences
+                </p>
+
+
+                <p class="text-gray-500 text-sm mt-2">
+                    Premium service • Luxury ambience • Quality experience
+                </p>
+
+
+            </div>
+
+
+
+            <!-- Reviews Display -->
+
+            <div id="review-container" class="grid md:grid-cols-3 gap-8">
+
+
+                <!-- Demo Review -->
+
+                <div class="bg-[#171412] p-7 rounded-3xl border border-[#D4AF37]/20">
+
+                    <h3 class="text-xl text-white font-bold">
+                        Rahul Sharma
+                    </h3>
+
+                    <div class="text-[#D4AF37] mt-2">
+                        ★★★★★
+                    </div>
+
+                    <p class="text-gray-400 mt-4">
+                        Amazing ambience and premium service. Loved the experience.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- Add Review -->
+
+            <div class="max-w-2xl mx-auto mt-16 bg-[#171412] p-8 rounded-3xl border border-[#D4AF37]/20">
+
+
+                <h3 class="text-3xl text-white font-bold mb-6 text-center">
+                    Share Your Experience
+                </h3>
+
+
+                <input id="review-name" type="text" placeholder="Your Name"
+                    class="w-full mb-4 p-4 bg-black text-white rounded-xl border border-[#D4AF37]/30 outline-none focus:border-[#d4af37]">
+
+
+                <select id="review-rating"
+                    class="w-full mb-4 p-4 bg-black text-white rounded-xl border border-[#D4AF37]/30 outline-none focus:border-[#d4af37]">
+
+                    <option value="★★★★★">5 Stars</option>
+                    <option value="★★★★">4 Stars</option>
+                    <option value="★★★">3 Stars</option>
+                    <option value="★★">2 Stars</option>
+                    <option value="★">1 Star</option>
+
+                </select>
+
+
+
+                <textarea id="review-message" placeholder="Your Review"
+                    class="w-full mb-4 p-4 bg-black text-white rounded-xl border border-[#D4AF37]/30 outline-none focus:border-[#d4af37]"></textarea>
+
+
+
+
+
+                <button onclick="addReview()" class="w-full bg-[#D4AF37] text-black py-3 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] 
+                hover:shadow-[0_0_35px_rgba(212,175,55,0.5)]">
+
+                    Submit Review
+
+                </button>
+
+                <p id="review-success" class="hidden text-[#D4AF37] text-center mt-5 font-semibold">
+                    ✨ Thank you for sharing your experience!
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact" class="py-24 bg-[#0b0b0b]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+
+            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+                Contact Us
+            </p>
+
+
+            <h2 class="text-center text-5xl font-bold text-white mt-4">
+                Get In Touch
+            </h2>
+
+
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mt-6">
+                Have a question or want to reserve your experience? We would love to hear from you.
+            </p>
+
+
+            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 mb-16"></div>
+
+
+
+            <!-- Contact Cards -->
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+
+                <div
+                    class="bg-[#171412] p-8 rounded-3xl border border-[#D4AF37]/20 text-center hover:border-[#D4AF37] transition">
+
+                    <i class="fa-solid fa-location-dot text-[#D4AF37] text-3xl"></i>
+
+                    <h3 class="text-white text-xl font-bold mt-4">
+                        Location
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Ambala City
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="bg-[#171412] p-8 rounded-3xl border border-[#D4AF37]/20 text-center hover:border-[#D4AF37] transition">
+
+                    <i class="fa-solid fa-phone text-[#D4AF37] text-3xl"></i>
+
+                    <h3 class="text-white text-xl font-bold mt-4">
+                        Call Us
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+
+
+
+                <div
+                    class="bg-[#171412] p-8 rounded-3xl border border-[#D4AF37]/20 text-center hover:border-[#D4AF37] transition">
+
+                    <i class="fa-solid fa-clock text-[#D4AF37] text-3xl"></i>
+
+                    <h3 class="text-white text-xl font-bold mt-4">
+                        Opening Hours
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        10:00 AM - 11:00 PM
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <!-- Contact Form -->
+
+            <div class="max-w-3xl mx-auto bg-[#171412] p-8 rounded-3xl border border-[#D4AF37]/20">
+
+                <h3 class="text-3xl text-white font-bold text-center mb-8">
+                    Send Us A Message
+                </h3>
+
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+
+                    <input type="text" placeholder="Your Name"
+                        class="w-full p-4 bg-black text-white rounded-xl border border-gray-700 focus:border-[#D4AF37] outline-none">
+
+
+                    <input type="email" placeholder="Your Email"
+                        class="w-full p-4 bg-black text-white rounded-xl border border-gray-700 focus:border-[#D4AF37] outline-none">
+
+
+                </div>
+
+
+
+                <textarea placeholder="Your Message" rows="5"
+                    class="w-full mt-6 p-4 bg-black text-white rounded-xl border border-gray-700 focus:border-[#D4AF37] outline-none"></textarea>
+
+
+
+                <button class="mt-6 w-full bg-[#D4AF37] text-black py-3 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]
+                hover:shadow-[0_0_35px_rgba(212,175,55,0.5)]">
+
+                    Send Message
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer class="bg-black border-t border-[#D4AF37]/20 pt-16 pb-8">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Logo -->
+
+                <div>
+
+                    <h2 class="text-3xl font-bold text-[#D4AF37]">
+                        G-Class Lounge
+                    </h2>
+
+                    <p class="text-gray-400 mt-5 leading-8">
+
+                        Experience luxury with every sip.
+                        Premium chai, handcrafted coffee,
+                        delicious snacks and unforgettable moments.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+
+                <div>
+
+                    <h3 class="text-white text-xl font-semibold mb-6">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3">
+
+                        <li><a href="#home" class="text-gray-400 hover:text-[#D4AF37] transition">Home</a></li>
+
+                        <li><a href="#menu" class="text-gray-400 hover:text-[#D4AF37] transition">Menu</a></li>
+
+                        <li><a href="#gallery" class="text-gray-400 hover:text-[#D4AF37] transition">Gallery</a></li>
+
+                        <li><a href="#events" class="text-gray-400 hover:text-[#D4AF37] transition">Events</a></li>
+
+                        <li><a href="#reviews" class="text-gray-400 hover:text-[#D4AF37] transition">Reviews</a></li>
+
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#D4AF37] transition">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div>
+
+                    <h3 class="text-white text-xl font-semibold mb-6">
+                        Contact
+                    </h3>
+
+                    <div class="space-y-4">
+
+                        <p class="text-gray-400">
+                            <i class="fa-solid fa-location-dot text-[#D4AF37] mr-3"></i>
+                            Ambala, Haryana
+                        </p>
+
+                        <p class="text-gray-400">
+                            <i class="fa-solid fa-phone text-[#D4AF37] mr-3"></i>
+                            +91 98765 43210
+                        </p>
+
+                        <p class="text-gray-400">
+                            <i class="fa-solid fa-envelope text-[#D4AF37] mr-3"></i>
+                            info@gclasslounge.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Opening Hours -->
+
+                <div>
+
+                    <h3 class="text-white text-xl font-semibold mb-6">
+                        Opening Hours
+                    </h3>
+
+                    <div class="space-y-3 text-gray-400">
+
+                        <p>Monday - Friday</p>
+                        <p class="text-[#D4AF37]">
+                            10:00 AM - 10:00 PM
+                        </p>
+
+                        <p class="pt-3">
+                            Saturday - Sunday
+                        </p>
+
+                        <p class="text-[#D4AF37]">
+                            9:00 AM - 11:30 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Social -->
+
+            <div class="flex justify-center gap-6 mt-14">
+
+                <a href="#"
+                    class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                    class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                    class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition">
+
+                    <i class="fab fa-x-twitter"></i>
+
+                </a>
+
+                <a href="#"
+                    class="w-12 h-12 rounded-full border border-[#D4AF37] flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Bottom -->
+
+            <div class="border-t border-[#D4AF37]/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-500 text-center">
+
+                    © 2026 G-Class Lounge. All Rights Reserved.
+
+                </p>
+
+                <p class="text-gray-500 mt-4 md:mt-0">
+
+                    Crafted with
+                    <i class="fa-solid fa-heart text-red-500 mx-1"></i>
+                    for Luxury Cafe Experience
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- cart-sidebar -->
+
+    <div id="cart-sidebar"
+        class="fixed top-0 right-[-420px] w-[380px] h-screen bg-[#111111] border-l border-[#D4AF37]/30 shadow-2xl transition-all duration-500 z-[999] flex flex-col">
+
+        <div class="p-6 border-b border-[#D4AF37]/20">
+
+            <div class="flex justify-between items-start">
+
+                <h2 class="text-2xl font-bold text-[#D4AF37]">
+                    Your Cart
+                </h2>
+
+                <button id="close-cart"
+                    class="w-10 h-10 rounded-xl border border-[#D4AF37]/30 text-white hover:bg-[#D4AF37] hover:text-black transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <button onclick="clearCart()"
+                class="w-full mt-4 bg-transparent border border-red-500/40 text-red-400 py-3 rounded-xl font-semibold hover:border-red-500 hover:bg-red-500/10 hover:text-red-300 transition-all duration-300">
+
+                <i class="fa-solid fa-trash mr-2"></i>
+                Clear Cart
+
+            </button>
+
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 text-gray-400">
+            Your cart is empty.
+        </div>
+
+        <div class="border-t border-[#D4AF37]/20 p-6">
+
+            <div class="flex justify-between items-center">
+
+                <span class="text-xl text-white font-semibold">
+                    Total
+                </span>
+
+                <span id="cart-total" class="text-2xl text-[#D4AF37] font-bold">
+                    ₹0
+                </span>
+
+            </div>
+
+            <button onclick="openCheckout()"
+                class="w-full mt-5 bg-[#D4AF37] text-black py-3 rounded-xl font-bold hover:scale-105  hover:shadow-[0_0_25px_rgba(212,175,55,0.6)]transition-all duration-300">
+
+                <i class="fa-solid fa-bag-shopping mr-2"></i>
+                Place Order
+
+            </button>
+        </div>
+
+    </div>
+
+    <div id="success-popup" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-[9999]">
+
+        <div class="bg-[#171412] border border-[#D4AF37] rounded-2xl p-8 text-center w-[90%] max-w-md">
+
+            <div class="text-6xl mb-4">✅</div>
+
+            <h2 class="text-3xl text-[#D4AF37] font-bold">
+                Order Placed!
+            </h2>
+
+            <p class="text-gray-300 mt-4">
+                Thank you for choosing G Class Lounge.
+            </p>
+
+            <button onclick="closePopup()" class="mt-6 bg-[#D4AF37] text-black px-6 py-3 rounded-xl font-semibold">
+                Awesome
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="toast"
+        class="fixed bottom-8 right-8 translate-y-32 opacity-0 bg-[#171412] border border-[#D4AF37] text-white px-6 py-4 rounded-2xl shadow-2xl transition-all duration-500 z-[9999]">
+
+        <span id="toast-message">
+            Item Added
+        </span>
+
+    </div>
+
+    <div id="booking-popup" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-[9999]">
+
+        <div class="bg-[#171412] border border-[#D4AF37] rounded-2xl p-8 text-center w-[90%] max-w-md">
+
+            <div class="text-6xl mb-4">📅</div>
+
+            <h2 class="text-3xl text-[#D4AF37] font-bold">
+                Table Reserved!
+            </h2>
+
+            <p class="text-gray-300 mt-4">
+                Your reservation has been received.<br>
+                We look forward to welcoming you at G Class Lounge.
+            </p>
+
+            <button onclick="closeBookingPopup()"
+                class="mt-6 bg-[#D4AF37] text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+
+                Awesome
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+
+    <div id="checkout-modal" class="hidden fixed inset-0 bg-black/80 z-[9999] flex items-center justify-center px-5">
+
+
+        <div class="bg-[#171412] border border-[#D4AF37]/40 
+rounded-3xl p-8 w-full max-w-md shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+
+
+            <h2 class="text-3xl text-[#D4AF37] font-bold text-center">
+                Complete Your Order
+            </h2>
+
+
+            <p class="text-gray-400 text-center mt-3">
+                Enter your details to confirm your order
+            </p>
+
+
+
+            <input id="customer-name" type="text" placeholder="Your Name"
+                class="w-full mt-6 p-4 bg-black text-white rounded-xl border border-gray-700 outline-none focus:border-[#D4AF37]">
+
+
+
+            <input id="customer-phone" type="number" placeholder="Phone Number"
+                class="w-full mt-4 p-4 bg-black text-white rounded-xl border border-gray-700 outline-none focus:border-[#D4AF37]">
+
+
+
+            <button onclick="placeOrder()" class="w-full mt-6 bg-[#D4AF37] text-black py-3 rounded-full font-bold
+hover:scale-105 transition">
+
+                <i class="fa-solid fa-check mr-2"></i>
+                Confirm Order
+
+            </button>
+
+
+
+            <button onclick="closeCheckout()" class="w-full mt-4 text-gray-400 hover:text-white">
+
+                Cancel
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN LOGIN POPUP -->
+
+    <div id="admin-login" class="hidden fixed inset-0 bg-black/80 z-[9999] flex items-center justify-center px-5">
+
+
+        <div class="bg-[#171412] border border-[#D4AF37]/40 rounded-3xl p-8 w-full max-w-md">
+
+
+            <h2 class="text-3xl text-[#D4AF37] font-bold text-center">
+                Admin Login
+            </h2>
+
+
+            <input id="admin-password" type="password" placeholder="Enter Password"
+                class="w-full mt-6 p-4 bg-black text-white rounded-xl border border-gray-700 focus:border-[#D4AF37] outline-none">
+
+
+
+            <button onclick="checkAdmin()" class="w-full mt-5 bg-[#D4AF37] text-black py-3 rounded-full font-bold">
+
+                Login
+
+            </button>
+
+
+            <button onclick="closeAdmin()" class="w-full mt-4 text-gray-400">
+
+                Cancel
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+    <button id="scrollTopBtn"
+        class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-[#D4AF37] text-black text-xl shadow-lg hover:scale-110 transition-all duration-300 z-[9999]"
+        style="display:none;">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
