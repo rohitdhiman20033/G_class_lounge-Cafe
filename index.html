@@ -30,23 +30,25 @@
     <nav id="navbar"
         class="fixed top-0 left-0 w-full z-50 bg-black  border-b border-[#d4af37]/20 transition-all duration-500  ">
 
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-2 py-1">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-2">
 
             <a href="#home" id="logo" class="flex items-center gap-3">
 
-                <img src="images/logo chai.jpeg" alt="G-Class Lounge Logo" class="w-20 h-20 object-contain">
+                <img src="images/logo chai.jpeg" alt="G-Class Lounge Logo"
+                    class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
 
                 <div class="leading-tight">
 
-                    <h1 class="text-2xl font-bold gold tracking-wider m-0">
-                        G-Class Lounge
-                    </h1>
+                    <h1 class="text-xl sm:text-2xl font-bold gold tracking-wider m-0">
+                        G-CLASS <br> LOUNGE
+                    </h1>    
 
 
 
-                    <p class="text-[10px] text-gray-400 tracking-[2px]  uppercase">
-                        Luxury Chai Cafe
-                    </p>
+                    <p class="text-[8px] sm:text-[10px] text-gray-400 tracking-[1px] sm:tracking-[2px] uppercase">
+                        LUXURY CHAI CAFE
+                    </p>    
+
 
                 </div>
 
@@ -126,7 +128,7 @@
 
 
                 <a href="#booking"
-                    class="hidden md:block border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-lg hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                    class="hidden md:block border border-[#D4AF37] text-[#D4AF37] px-6 py-3 ml-2 rounded-2xl hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
 
                     Book Table
 
@@ -150,7 +152,8 @@
 
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed top-[88px] left-0 w-full bg-black border-t border-[#D4AF37]/20 z-[9998]">
+    <div id="mobile-menu"
+    class="hidden fixed top-[72px] md:top-[88px] left-0 w-full bg-black border-t border-[#D4AF37]/20 z-[9998]">
 
         <a href="#home" class="block px-6 py-4 text-white mobile-link">Home</a>
 
@@ -188,11 +191,11 @@
 
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35"></div>
 
-       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
             <div class="max-w-2xl">
 
-                <p class="uppercase tracking-[6px] text-[#d4af37] mb-4">
+                <p class="uppercase tracking-[6px] text-[#d4af37] mt-1 mb-4">
                     Experience • Relax • Enjoy
                 </p>
 
@@ -1206,63 +1209,64 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
 
-            <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
-                Reservation
-            </p>
+        <p class="text-center uppercase tracking-[5px] text-[#D4AF37]">
+            Reservation
+        </p>
 
-            <h2 class="text-5xl text-white font-bold text-center mt-4">
-                Book Your Luxury Table
-            </h2>
+        <h2 class="text-5xl text-white font-bold text-center mt-4">
+            Book Your Luxury Table
+        </h2>
 
-            <p class="text-center text-gray-400 mt-5 max-w-2xl mx-auto">
-                Reserve your table and enjoy a premium luxury experience at G Class Lounge.
-            </p>
+        <p class="text-center text-gray-400 mt-5 max-w-2xl mx-auto">
+            Reserve your table and enjoy a premium luxury experience at G Class Lounge.
+        </p>
 
-            <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-6 mb-14"></div>
+        <div class="w-24 h-1 bg-[#D4AF37] rounded-full mx-auto mt-6 mb-14"></div>
 
-            <div class="max-w-3xl mx-auto bg-[#171412] border border-[#D4AF37]/20 rounded-3xl p-5 sm:p-8 md:p-10 overflow-hidden">
+        <div
+            class="max-w-3xl mx-auto bg-[#171412] border border-[#D4AF37]/20 rounded-3xl p-5 sm:p-8 md:p-10 overflow-hidden">
 
-                <form id="booking-form" class="grid md:grid-cols-2 gap-6">
+            <form id="booking-form" class="grid md:grid-cols-2 gap-6">
 
-                    <input type="text" id="name" placeholder="Full Name"
-                        class=" w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+                <input type="text" id="name" placeholder="Full Name"
+                    class=" w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
 
-                    <input type="tel" id="phone" placeholder="Phone Number"
-                        class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+                <input type="tel" id="phone" placeholder="Phone Number"
+                    class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
 
-                    <input type="date" id="date"
-                        class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+                <input type="date" id="date"
+                    class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
 
-                    <input type="time" id="time"
-                        class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+                <input type="time" id="time"
+                    class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
 
-                    <select id="guests"
-                        class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
+                <select id="guests"
+                    class="w-full bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none focus:border-[#D4AF37]">
 
-                        <option value="">Guests</option>
-                        <option>1 Person</option>
-                        <option>2 Persons</option>
-                        <option>3 Persons</option>
-                        <option>4 Persons</option>
-                        <option>5 Persons</option>
-                        <option>6+ Persons</option>
+                    <option value="">Guests</option>
+                    <option>1 Person</option>
+                    <option>2 Persons</option>
+                    <option>3 Persons</option>
+                    <option>4 Persons</option>
+                    <option>5 Persons</option>
+                    <option>6+ Persons</option>
 
-                    </select>
+                </select>
 
-                    <textarea id="description" rows="3" placeholder="Special Request (Optional)"
- class="w-full md:col-span-2 bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none resize-none overflow-hidden focus:border-[#D4AF37]"></textarea>
+                <textarea id="description" rows="3" placeholder="Special Request (Optional)"
+                    class="w-full md:col-span-2 bg-[#0f0f0f] border border-[#D4AF37]/30 rounded-xl p-4 text-white outline-none resize-none overflow-hidden focus:border-[#D4AF37]"></textarea>
 
 
-                    <button type="submit"
-                        class="w-full md:col-span-2 bg-[#D4AF37] text-black rounded-xl py-4 font-bold hover:scale-[1.02] transition-all duration-300">
+                <button type="submit"
+                    class="w-full md:col-span-2 bg-[#D4AF37] text-black rounded-xl py-4 font-bold hover:scale-[1.02] transition-all duration-300">
 
-                        Reserve Table
+                    Reserve Table
 
-                    </button>
+                </button>
 
-                </form>
+            </form>
 
-            </div>
+        </div>
 
         </div>
 
