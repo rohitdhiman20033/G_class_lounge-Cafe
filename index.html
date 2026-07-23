@@ -41,13 +41,13 @@
 
                     <h1 class="text-xl sm:text-2xl font-bold gold tracking-wider m-0">
                         G-CLASS <br> LOUNGE
-                    </h1>    
+                    </h1>
 
 
 
                     <p class="text-[8px] sm:text-[10px] text-gray-400 tracking-[1px] sm:tracking-[2px] uppercase">
                         LUXURY CHAI CAFE
-                    </p>    
+                    </p>
 
 
                 </div>
@@ -149,11 +149,10 @@
             </div>
 
         </div>
-
     </nav>
 
     <div id="mobile-menu"
-    class="hidden fixed top-[72px] md:top-[88px] left-0 w-full bg-black border-t border-[#D4AF37]/20 z-[9998]">
+        class="hidden fixed top-[72px] md:top-[88px] left-0 w-full bg-black border-t border-[#D4AF37]/20 z-[9998]">
 
         <a href="#home" class="block px-6 py-4 text-white mobile-link">Home</a>
 
@@ -185,10 +184,16 @@
 
     <!-- Hero -->
 
-    <section id="home"
-        class="relative mt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center overflow-hidden"
-        style="background-image:url('images/hero\ img.jpeg');">
+    <section id="home" class="relative mt-24 min-h-screen flex items-center overflow-hidden">
 
+        <picture class="absolute inset-0 w-full h-full">
+            <source media="(max-width: 768px)" srcset="images/mobileHero.png">
+
+            <img src="images/hero img.jpeg" alt="Hero" class="hero-img w-full h-full object-cover object-center">
+        </picture>
+
+        
+      
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

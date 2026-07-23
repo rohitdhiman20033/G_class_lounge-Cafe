@@ -7,20 +7,36 @@ html{
     scroll-behavior: smooth;
 }
 
-#home{
-    background-size: 105%;
-    animation: heroZoom 10s ease-in-out infinite alternate;
+.hero-img{
+    animation: heroZoomDesktop 10s ease-in-out infinite alternate;
 }
 
-@keyframes heroZoom{
+@keyframes heroZoomDesktop{
     from{
-        background-size:105%;
+        transform: scale(1.05);
     }
-
     to{
-        background-size:112%;
+        transform: scale(1.10);
     }
 }
+
+@media (max-width:768px){
+
+    .hero-img{
+        animation: heroZoomMobile 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoomMobile{
+        from{
+            transform: scale(1.15);
+        }
+        to{
+            transform: scale(1.25);
+        }
+    }
+
+}
+
 
 h1,h2,h3{
     font-family:'Cinzel',serif;
