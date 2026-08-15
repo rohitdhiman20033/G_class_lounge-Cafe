@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Wishlist | G-Class Lounge</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .brand-font {
+            font-family: "Cinzel", serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white">
+
+    <!-- Navbar -->
+
+    <nav
+        class="sticky top-0 z-50 bg-black border-b border-[#D4AF37]/20"
+    >
+        <div
+            class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3"
+        >
+
+            <a
+                href="index.html"
+                class="flex items-center gap-3"
+            >
+                <img
+                    src="images/logo chai.jpeg"
+                    alt="G-Class Lounge Logo"
+                    class="w-16 h-16 object-contain"
+                >
+
+                <div>
+                    <h1
+                        class="brand-font text-xl sm:text-2xl font-bold text-[#D4AF37]"
+                    >
+                        G-Class Lounge
+                    </h1>
+
+                    <p
+                        class="text-[9px] text-gray-400 tracking-[3px] uppercase"
+                    >
+                        Luxury Chai Cafe
+                    </p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-4">
+
+                <a
+                    href="index.html#menu"
+                    class="hidden sm:inline-flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Menu
+                </a>
+
+                <a
+                    href="index.html"
+                    class="w-11 h-11 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition"
+                >
+                    <i class="fa-solid fa-house"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+
+    <section
+        class="relative overflow-hidden border-b border-[#D4AF37]/10"
+    >
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.16),transparent_45%)]"
+        ></div>
+
+        <div
+            class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        >
+
+            <p
+                class="text-[#D4AF37] uppercase tracking-[5px] text-sm"
+            >
+                Saved Favourites
+            </p>
+
+            <div
+                class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mt-4"
+            >
+
+                <div>
+                    <h2
+                        class="brand-font text-4xl sm:text-5xl font-bold"
+                    >
+                        My Wishlist
+                    </h2>
+
+                    <p
+                        class="text-gray-400 mt-4 max-w-2xl leading-7"
+                    >
+                        Your favourite drinks and food items, saved in one place.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-[#151311] border border-[#D4AF37]/20 rounded-2xl px-6 py-4"
+                >
+                    <p class="text-gray-400 text-sm">
+                        Total saved items
+                    </p>
+
+                    <p
+                        id="wishlist-total-count"
+                        class="text-3xl font-bold text-[#D4AF37] mt-1"
+                    >
+                        0
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Main -->
+
+    <main
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+    >
+
+        <!-- Loading -->
+
+        <div
+            id="wishlist-loading"
+            class="text-center py-24"
+        >
+            <i
+                class="fa-solid fa-spinner fa-spin text-5xl text-[#D4AF37]"
+            ></i>
+
+            <h3 class="text-2xl font-bold mt-6">
+                Loading Wishlist
+            </h3>
+
+            <p class="text-gray-400 mt-3">
+                Please wait while we load your saved items.
+            </p>
+        </div>
+
+        <!-- Error -->
+
+        <div
+            id="wishlist-error"
+            class="hidden text-center py-24"
+        >
+            <div class="text-6xl">
+                ⚠️
+            </div>
+
+            <h3
+                class="text-3xl font-bold text-red-400 mt-5"
+            >
+                Wishlist Could Not Be Loaded
+            </h3>
+
+            <p
+                id="wishlist-error-message"
+                class="text-gray-400 mt-4"
+            >
+                Please try again.
+            </p>
+
+            <button
+                id="wishlist-retry-button"
+                type="button"
+                class="mt-7 bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+            >
+                Try Again
+            </button>
+        </div>
+
+        <!-- Empty -->
+
+        <div
+            id="wishlist-empty"
+            class="hidden text-center py-24"
+        >
+            <div
+                class="w-24 h-24 mx-auto rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center"
+            >
+                <i
+                    class="fa-regular fa-heart text-4xl text-[#D4AF37]"
+                ></i>
+            </div>
+
+            <h3
+                class="brand-font text-3xl font-bold mt-7"
+            >
+                Your Wishlist Is Empty
+            </h3>
+
+            <p
+                class="text-gray-400 max-w-md mx-auto mt-4 leading-7"
+            >
+                Save your favourite menu items and they will appear here.
+            </p>
+
+            <a
+                href="index.html#menu"
+                class="inline-flex items-center gap-2 mt-7 bg-[#D4AF37] text-black px-7 py-3 rounded-full font-semibold hover:scale-105 transition"
+            >
+                <i class="fa-solid fa-utensils"></i>
+                Explore Menu
+            </a>
+        </div>
+
+        <!-- Grid -->
+
+        <div
+            id="wishlist-grid"
+            class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+
+</body>
+
+</html>

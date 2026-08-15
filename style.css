@@ -23,7 +23,7 @@ html{
 @media (max-width:768px){
 
     .hero-img{
-        animation: heroZoomMobile 10s ease-in-out infinite alternate;
+        animation: heroZoomMobile 3s ease-in-out infinite alternate;
     }
 
     @keyframes heroZoomMobile{
@@ -31,15 +31,17 @@ html{
             transform: scale(1.15);
         }
         to{
-            transform: scale(1.25);
+            transform: scale(1.30);
         }
     }
 
 }
 
 
-h1,h2,h3{
-    font-family:'Cinzel',serif;
+h1,
+h2,
+h3 {
+    font-family: "Cinzel Decorative", serif;
 }
 
 .gold{

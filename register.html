@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | G-Class Lounge</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .brand-font {
+            font-family: "Cinzel", serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white">
+
+    <main class="min-h-screen grid lg:grid-cols-2">
+
+        <!-- Left Visual Section -->
+
+        <section class="hidden lg:flex relative overflow-hidden">
+
+            <img src="images/hero img.jpeg"
+                alt="G-Class Lounge interior"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/60 to-[#080808]"></div>
+
+            <div class="relative z-10 flex flex-col justify-between w-full p-12">
+
+                <a href="index.html" class="flex items-center gap-4 w-fit">
+
+                    <img src="images/logo chai.jpeg"
+                        alt="G-Class Lounge Logo"
+                        class="w-20 h-20 object-contain rounded-2xl">
+
+                    <div>
+                        <h1 class="brand-font text-3xl font-bold text-[#D4AF37]">
+                            G-Class Lounge
+                        </h1>
+
+                        <p class="text-gray-300 tracking-[3px] text-xs uppercase mt-1">
+                            Luxury Chai Cafe
+                        </p>
+                    </div>
+
+                </a>
+
+                <div class="max-w-xl">
+
+                    <p class="text-[#D4AF37] uppercase tracking-[5px] text-3xl">
+                        Welcome
+                    </p>
+
+                    <h2 class="brand-font text-5xl font-bold leading-tight mt-5">
+                        Begin Your
+                        <span class="text-[#D4AF37]">
+                            Luxury Experience.
+                        </span>
+                    </h2>
+
+                    <p class="text-gray-300 leading-8 mt-6">
+                        Create your account to manage your orders, table bookings,
+                        wishlist and profile from one secure account.
+                    </p>
+
+                </div>
+
+                <p class="text-gray-500 text-sm">
+                    © 2026 G-Class Lounge
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Register Section -->
+
+        <section class="flex items-center justify-center px-5 py-12">
+
+            <div class="w-full max-w-md">
+
+                <!-- Mobile Logo -->
+
+                <div class="lg:hidden text-center mb-10">
+
+                    <a href="index.html" class="inline-flex flex-col items-center">
+
+                        <img src="images/logo chai.jpeg"
+                            alt="G-Class Lounge Logo"
+                            class="w-20 h-20 object-contain rounded-2xl">
+
+                        <h1 class="brand-font text-2xl font-bold text-[#D4AF37] mt-3">
+                            G-Class Lounge
+                        </h1>
+
+                    </a>
+
+                </div>
+
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-gray-400 hover:text-[#D4AF37] transition">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to website
+
+                </a>
+
+                <div class="mt-10">
+
+                    <p class="text-[#D4AF37] uppercase tracking-[4px] text-sm">
+                        Account Access
+                    </p>
+
+                    <h2 class="brand-font text-4xl font-bold mt-3">
+                        Create Account
+                    </h2>
+
+                    <p class="text-gray-400 mt-3">
+                        Enter your details to create your G-Class Lounge account.
+                    </p>
+
+                </div>
+
+                <div id="auth-message"
+                    class="hidden mt-6 rounded-xl border px-4 py-3 text-sm">
+                </div>
+
+                <form id="register-form" class="mt-8 space-y-5">
+
+                    <!-- Full Name -->
+
+                    <div>
+
+                        <label for="register-fullname"
+                            class="block text-sm text-gray-300 mb-2">
+
+                            Full Name
+
+                        </label>
+
+                        <div class="relative">
+
+                            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                            <input id="register-fullname"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="Enter your full name"
+                                required
+                                class="w-full bg-[#151311] border border-[#D4AF37]/20 rounded-xl py-4 pl-12 pr-4 text-white outline-none focus:border-[#D4AF37] transition">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div>
+
+                        <label for="register-email"
+                            class="block text-sm text-gray-300 mb-2">
+
+                            Email Address
+
+                        </label>
+
+                        <div class="relative">
+
+                            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                            <input id="register-email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                required
+                                class="w-full bg-[#151311] border border-[#D4AF37]/20 rounded-xl py-4 pl-12 pr-4 text-white outline-none focus:border-[#D4AF37] transition">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Phone -->
+
+                    <div>
+
+                        <label for="register-phone"
+                            class="block text-sm text-gray-300 mb-2">
+
+                            Phone Number
+
+                        </label>
+
+                        <div class="relative">
+
+                            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                            <input id="register-phone"
+                                type="tel"
+                                autocomplete="tel"
+                                inputmode="numeric"
+                                maxlength="15"
+                                placeholder="Enter your phone number"
+                                required
+                                class="w-full bg-[#151311] border border-[#D4AF37]/20 rounded-xl py-4 pl-12 pr-4 text-white outline-none focus:border-[#D4AF37] transition">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div>
+
+                        <label for="register-password"
+                            class="block text-sm text-gray-300 mb-2">
+
+                            Password
+
+                        </label>
+
+                        <div class="relative">
+
+                            <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                            <input id="register-password"
+                                type="password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                placeholder="Create a password"
+                                required
+                                class="w-full bg-[#151311] border border-[#D4AF37]/20 rounded-xl py-4 pl-12 pr-12 text-white outline-none focus:border-[#D4AF37] transition">
+
+                            <button type="button"
+                                data-target="register-password"
+                                aria-label="Show password"
+                                class="register-password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#D4AF37]">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Confirm Password -->
+
+                    <div>
+
+                        <label for="register-confirm-password"
+                            class="block text-sm text-gray-300 mb-2">
+
+                            Confirm Password
+
+                        </label>
+
+                        <div class="relative">
+
+                            <i class="fa-solid fa-shield-halved absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]"></i>
+
+                            <input id="register-confirm-password"
+                                type="password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                placeholder="Enter password again"
+                                required
+                                class="w-full bg-[#151311] border border-[#D4AF37]/20 rounded-xl py-4 pl-12 pr-12 text-white outline-none focus:border-[#D4AF37] transition">
+
+                            <button type="button"
+                                data-target="register-confirm-password"
+                                aria-label="Show password"
+                                class="register-password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#D4AF37]">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <button id="register-button"
+                        type="submit"
+                        class="w-full bg-[#D4AF37] text-black py-4 rounded-xl font-bold hover:bg-[#bd992e] transition disabled:opacity-60 disabled:cursor-not-allowed">
+
+                        <span id="register-button-text">
+                            Create Account
+                        </span>
+
+                    </button>
+
+                </form>
+
+                <p class="text-center text-gray-400 mt-8">
+
+                    Already have an account?
+
+                    <a href="login.html"
+                        class="text-[#D4AF37] font-semibold hover:underline">
+
+                        Sign In
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        const registerPasswordButtons =
+            document.querySelectorAll(".register-password-toggle");
+
+        registerPasswordButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const targetInput =
+                    document.getElementById(button.dataset.target);
+
+                const icon =
+                    button.querySelector("i");
+
+                const isPassword =
+                    targetInput.type === "password";
+
+                targetInput.type =
+                    isPassword ? "text" : "password";
+
+                icon.classList.toggle("fa-eye", !isPassword);
+                icon.classList.toggle("fa-eye-slash", isPassword);
+
+                button.setAttribute(
+                    "aria-label",
+                    isPassword
+                        ? "Hide password"
+                        : "Show password"
+                );
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

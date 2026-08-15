@@ -1,0 +1,47 @@
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django generated files
+media/
+logs/
+staticfiles/
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Test / Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.coverage.*
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+
+# Build / package files
+build/
+dist/
+*.egg-info/

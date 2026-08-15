@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Verify OTP | G-Class Lounge</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .brand-font {
+            font-family: "Cinzel", serif;
+        }
+
+        .otp-input::-webkit-outer-spin-button,
+        .otp-input::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+
+        .otp-input {
+            appearance: textfield;
+        }
+
+        @keyframes floatIcon {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .floating-icon {
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-white">
+
+    <main class="min-h-screen grid lg:grid-cols-2">
+
+        <!-- Left Side -->
+
+        <section class="hidden lg:flex relative overflow-hidden">
+
+            <img
+                src="images/hero img.jpeg"
+                alt="G-Class Lounge"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/65 to-[#080808]">
+            </div>
+
+            <div
+                class="relative z-10 flex flex-col justify-between w-full p-12">
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-4 w-fit">
+
+                    <img
+                        src="images/logo chai.jpeg"
+                        alt="G-Class Lounge Logo"
+                        class="w-20 h-20 object-contain rounded-2xl">
+
+                    <div>
+
+                        <h1
+                            class="brand-font text-3xl font-bold text-[#D4AF37]">
+
+                            G-Class Lounge
+
+                        </h1>
+
+                        <p
+                            class="text-gray-300 tracking-[3px] text-xs uppercase mt-1">
+
+                            Luxury Chai Cafe
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+                <div class="max-w-xl">
+
+                    <p
+                        class="text-[#D4AF37] uppercase tracking-[5px] text-sm">
+
+                        Secure Verification
+
+                    </p>
+
+                    <h2
+                        class="brand-font text-5xl font-bold leading-tight mt-5">
+
+                        Verify Your
+
+                        <span class="text-[#D4AF37]">
+                            Identity.
+                        </span>
+
+                    </h2>
+
+                    <p class="text-gray-300 leading-8 mt-6">
+
+                        Enter the six-digit verification code sent to your
+                        registered Gmail address.
+
+                    </p>
+
+                    <div class="space-y-4 mt-10">
+
+                        <div class="flex items-center gap-4">
+
+                            <div
+                                class="w-11 h-11 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center">
+
+                                <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
+
+                            </div>
+
+                            <p class="text-gray-300">
+                                OTP delivered securely through email
+                            </p>
+
+                        </div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div
+                                class="w-11 h-11 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center">
+
+                                <i class="fa-solid fa-clock text-[#D4AF37]"></i>
+
+                            </div>
+
+                            <p class="text-gray-300">
+                                Verification code expires in 5 minutes
+                            </p>
+
+                        </div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div
+                                class="w-11 h-11 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center">
+
+                                <i class="fa-solid fa-shield-halved text-[#D4AF37]"></i>
+
+                            </div>
+
+                            <p class="text-gray-300">
+                                Never share your OTP with anyone
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="text-gray-500 text-sm">
+                    © 2026 G-Class Lounge
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- OTP Section -->
+
+        <section
+            class="flex items-center justify-center px-5 py-12">
+
+            <div class="w-full max-w-md">
+
+                <!-- Mobile Logo -->
+
+                <div class="lg:hidden text-center mb-10">
+
+                    <a
+                        href="index.html"
+                        class="inline-flex flex-col items-center">
+
+                        <img
+                            src="images/logo chai.jpeg"
+                            alt="G-Class Lounge Logo"
+                            class="w-20 h-20 object-contain rounded-2xl">
+
+                        <h1
+                            class="brand-font text-2xl font-bold text-[#D4AF37] mt-3">
+
+                            G-Class Lounge
+
+                        </h1>
+
+                    </a>
+
+                </div>
+
+                <a
+                    href="forgot-password.html"
+                    class="inline-flex items-center gap-2 text-gray-400 hover:text-[#D4AF37] transition">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Change email
+
+                </a>
+
+                <div
+                    class="w-20 h-20 rounded-3xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center mt-10 floating-icon">
+
+                    <i class="fa-solid fa-envelope-open-text text-[#D4AF37] text-3xl"></i>
+
+                </div>
+
+                <div class="mt-7">
+
+                    <p
+                        class="text-[#D4AF37] uppercase tracking-[4px] text-sm">
+
+                        Email Verification
+
+                    </p>
+
+                    <h2
+                        class="brand-font text-4xl font-bold mt-3">
+
+                        Enter OTP
+
+                    </h2>
+
+                    <p class="text-gray-400 mt-4 leading-7">
+
+                        We sent a six-digit verification code to
+
+                        <span
+                            id="otp-email-display"
+                            class="text-[#D4AF37] break-all">
+
+                            your email
+
+                        </span>
+
+                    </p>
+
+                </div>
+
+                <!-- Message -->
+
+                <div
+                    id="otp-message"
+                    class="hidden mt-6 rounded-xl border px-4 py-3 text-sm">
+                </div>
+
+                <!-- OTP Form -->
+
+                <form
+                    id="otp-form"
+                    class="mt-8">
+
+                    <div
+                        id="otp-container"
+                        class="grid grid-cols-6 gap-2 sm:gap-3">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 1"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 2"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 3"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 4"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 5"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                        <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="1"
+                            aria-label="OTP digit 6"
+                            class="otp-input w-full aspect-square min-w-0 bg-[#151311] border border-[#D4AF37]/20 rounded-xl text-center text-xl sm:text-2xl font-bold text-[#D4AF37] outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition">
+
+                    </div>
+
+                    <button
+                        id="verify-otp-button"
+                        type="submit"
+                        class="w-full mt-7 bg-[#D4AF37] text-black py-4 rounded-xl font-bold hover:bg-[#bd992e] transition disabled:opacity-60 disabled:cursor-not-allowed">
+
+                        <span id="verify-otp-button-text">
+
+                            <i class="fa-solid fa-circle-check mr-2"></i>
+                            Verify OTP
+
+                        </span>
+
+                    </button>
+
+                </form>
+
+                <!-- Resend -->
+
+                <div
+                    class="mt-7 text-center bg-[#151311] border border-[#D4AF37]/15 rounded-2xl p-5">
+
+                    <p class="text-gray-400 text-sm">
+
+                        Didn’t receive the code?
+
+                    </p>
+
+                    <div class="mt-3">
+
+                        <span
+                            id="resend-timer-text"
+                            class="text-gray-500 text-sm">
+
+                            Resend available in 60 seconds
+
+                        </span>
+
+                        <button
+                            id="resend-otp-button"
+                            type="button"
+                            disabled
+                            class="hidden text-[#D4AF37] font-semibold hover:underline disabled:opacity-50 disabled:cursor-not-allowed">
+
+                            Resend OTP
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="text-center text-gray-500 text-xs leading-6 mt-6">
+
+                    The OTP is valid for 5 minutes. For security, do not
+                    refresh repeatedly or share the code with anyone.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/verify-otp.js"></script>
+
+</body>
+
+</html>
