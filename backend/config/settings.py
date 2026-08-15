@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 import os
 
+import dj_database_url
+
 from datetime import timedelta
 from pathlib import Path
 
@@ -112,34 +114,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-
-        "NAME": os.getenv(
-            "DB_NAME",
-            "gclass_lounge"
-        ),
-
-        "USER": os.getenv(
-            "DB_USER",
-            "root"
-        ),
-
-        "PASSWORD": os.getenv(
-            "DB_PASSWORD",
-            ""
-        ),
-
-        "HOST": os.getenv(
-            "DB_HOST",
-            "127.0.0.1"
-        ),
-
-        "PORT": os.getenv(
-            "DB_PORT",
-            "3306"
-        ),
-    }
+    "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL"),
+        conn_max_age=600,
+        conn_health_checks=True,
+        ssl_require=True,
+    )
 }
 
 
