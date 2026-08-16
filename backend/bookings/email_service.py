@@ -1,7 +1,7 @@
+import resend
+
 from django.conf import settings
-from django.core.mail import send_mail
 from django.db import transaction
-from django.utils import timezone
 
 from .models import Booking
 
@@ -17,6 +17,17 @@ def _get_user_email(booking):
     ).strip()
 
     return email
+
+
+def _send_email(subject, message, recipient):
+    resend.api_key = settings.RESEND_API_KEY
+
+    resend.Emails.send({
+        "from": settings.RESEND_FROM_EMAIL,
+        "to": [recipient],
+        "subject": subject,
+        "text": message,
+    })
 
 
 def queue_booking_confirmation_email(booking_id):
@@ -77,12 +88,10 @@ def send_booking_confirmation_email(booking_id):
     )
 
     try:
-        send_mail(
-            subject=subject,
-            message=message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            fail_silently=False,
+        _send_email(
+            subject,
+            message,
+            email,
         )
     except Exception:
         return False
@@ -155,12 +164,10 @@ def send_booking_cancellation_email(booking_id):
     )
 
     try:
-        send_mail(
-            subject=subject,
-            message=message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            fail_silently=False,
+        _send_email(
+            subject,
+            message,
+            email,
         )
     except Exception:
         return False
@@ -235,12 +242,10 @@ def send_booking_refund_email(booking_id):
     )
 
     try:
-        send_mail(
-            subject=subject,
-            message=message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            fail_silently=False,
+        _send_email(
+            subject,
+            message,
+            email,
         )
     except Exception:
         return False

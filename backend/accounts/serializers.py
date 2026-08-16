@@ -1,13 +1,16 @@
 import secrets
 
+import secrets
+import resend
+
+
 from datetime import timedelta
 
 from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError as DjangoValidationError
-from django.core.mail import EmailMultiAlternatives
-from django.core.mail import send_mail
+
 from django.db import transaction
 from django.utils import timezone
 from rest_framework import serializers
@@ -438,21 +441,15 @@ class RegisterSerializer(serializers.Serializer):
         """
 
         try:
-            email_message = EmailMultiAlternatives(
-                subject=subject,
-                body=text_body,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[user.email],
-            )
+            resend.api_key = settings.RESEND_API_KEY
 
-            email_message.attach_alternative(
-                html_body,
-                "text/html",
-            )
-
-            email_message.send(
-                fail_silently=False
-            )
+            resend.Emails.send({
+                "from": settings.RESEND_FROM_EMAIL,
+                "to": [user.email],
+                "subject": subject,
+                "html": html_body,
+                "text": text_body,
+            })
 
         except Exception as error:
             verification_otp.delete()
@@ -882,21 +879,15 @@ class ForgotPasswordSerializer(serializers.Serializer):
         """
 
         try:
-            email_message = EmailMultiAlternatives(
-                subject=subject,
-                body=text_body,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[user.email],
-            )
+            resend.api_key = settings.RESEND_API_KEY
 
-            email_message.attach_alternative(
-                html_body,
-                "text/html",
-            )
-
-            email_message.send(
-                fail_silently=False
-            )
+            resend.Emails.send({
+                "from": settings.RESEND_FROM_EMAIL,
+                "to": [user.email],
+                "subject": subject,
+                "html": html_body,
+                "text": text_body,
+            })
 
         except Exception as error:
             otp.delete()
@@ -907,6 +898,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
                     "Please try again later."
                 )
             }) from error
+        
 
         return otp
 
@@ -1157,16 +1149,14 @@ class ResendVerificationOTPSerializer(serializers.Serializer):
         )
 
         try:
-            email_message = EmailMultiAlternatives(
-                subject=subject,
-                body=text_body,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[user.email],
-            )
+            resend.api_key = settings.RESEND_API_KEY
 
-            email_message.send(
-                fail_silently=False
-            )
+            resend.Emails.send({
+                "from": settings.RESEND_FROM_EMAIL,
+                "to": [user.email],
+                "subject": subject,
+                "text": text_body,
+            })
 
         except Exception as error:
             verification_otp.delete()

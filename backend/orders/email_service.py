@@ -1,7 +1,7 @@
 import logging
+import resend
 
 from django.conf import settings
-from django.core.mail import send_mail
 from django.db import transaction
 
 from .models import Order
@@ -16,6 +16,17 @@ def _get_user_email(order):
     ).strip()
 
     return email
+
+
+def _send_email(subject, message, recipient):
+    resend.api_key = settings.RESEND_API_KEY
+
+    resend.Emails.send({
+        "from": settings.RESEND_FROM_EMAIL,
+        "to": [recipient],
+        "subject": subject,
+        "text": message,
+    })
 
 
 def send_order_confirmation_email(order_id):
@@ -72,12 +83,10 @@ Regards,
 G-Class Lounge
 """.strip()
 
-        send_mail(
+        _send_email(
             subject,
             message,
-            settings.DEFAULT_FROM_EMAIL,
-            [email],
-            fail_silently=False,
+            email,
         )
 
         Order.objects.filter(
@@ -136,12 +145,10 @@ Regards,
 G-Class Lounge
 """.strip()
 
-        send_mail(
+        _send_email(
             subject,
             message,
-            settings.DEFAULT_FROM_EMAIL,
-            [email],
-            fail_silently=False,
+            email,
         )
 
         Order.objects.filter(
@@ -214,12 +221,10 @@ Regards,
 G-Class Lounge
 """.strip()
 
-        send_mail(
+        _send_email(
             subject,
             message,
-            settings.DEFAULT_FROM_EMAIL,
-            [email],
-            fail_silently=False,
+            email,
         )
 
         Order.objects.filter(
