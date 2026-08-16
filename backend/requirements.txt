@@ -11,6 +11,7 @@ idna==3.18
 mysqlclient==2.2.8
 packaging==26.3
 resend
+whitenoise
 pillow==12.3.0
 psycopg==3.3.4
 psycopg-binary==3.3.4
