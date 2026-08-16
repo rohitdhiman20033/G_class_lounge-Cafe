@@ -3,11 +3,7 @@ const API_BASE_URL = "https://g-class-lounge-cafe.onrender.com/api";
 
 
 async function getMenuItems() {
-
-    return await apiRequest("/menu/", {
-        skipAuth: true
-    });
-
+    return await apiRequest("/menu/");
 }
 
 // Orders API
