@@ -10,10 +10,12 @@ gunicorn==26.0.0
 idna==3.18
 mysqlclient==2.2.8
 packaging==26.3
-resend
 whitenoise
 cloudinary
 django-cloudinary-storage
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
 pillow==12.3.0
 psycopg==3.3.4
 psycopg-binary==3.3.4

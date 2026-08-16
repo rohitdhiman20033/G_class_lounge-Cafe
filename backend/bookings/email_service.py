@@ -1,7 +1,6 @@
-import resend
-
-from django.conf import settings
 from django.db import transaction
+
+from config.gmail_service import send_gmail_email
 
 from .models import Booking
 
@@ -20,14 +19,11 @@ def _get_user_email(booking):
 
 
 def _send_email(subject, message, recipient):
-    resend.api_key = settings.RESEND_API_KEY
-
-    resend.Emails.send({
-        "from": settings.RESEND_FROM_EMAIL,
-        "to": [recipient],
-        "subject": subject,
-        "text": message,
-    })
+    send_gmail_email(
+        subject=subject,
+        message=message,
+        recipient=recipient,
+    )
 
 
 def queue_booking_confirmation_email(booking_id):

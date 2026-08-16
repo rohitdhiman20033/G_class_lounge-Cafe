@@ -1,8 +1,8 @@
 import logging
-import resend
 
-from django.conf import settings
 from django.db import transaction
+
+from config.gmail_service import send_gmail_email
 
 from .models import Order
 
@@ -19,14 +19,11 @@ def _get_user_email(order):
 
 
 def _send_email(subject, message, recipient):
-    resend.api_key = settings.RESEND_API_KEY
-
-    resend.Emails.send({
-        "from": settings.RESEND_FROM_EMAIL,
-        "to": [recipient],
-        "subject": subject,
-        "text": message,
-    })
+    send_gmail_email(
+        subject=subject,
+        message=message,
+        recipient=recipient,
+    )
 
 
 def send_order_confirmation_email(order_id):

@@ -1,7 +1,5 @@
 import secrets
-
-import secrets
-import resend
+from config.gmail_service import send_gmail_email
 
 
 from datetime import timedelta
@@ -441,15 +439,11 @@ class RegisterSerializer(serializers.Serializer):
         """
 
         try:
-            resend.api_key = settings.RESEND_API_KEY
-
-            resend.Emails.send({
-                "from": settings.RESEND_FROM_EMAIL,
-                "to": [user.email],
-                "subject": subject,
-                "html": html_body,
-                "text": text_body,
-            })
+            send_gmail_email(
+                subject=subject,
+                message=text_body,
+                recipient=user.email,
+            )
 
         except Exception as error:
             verification_otp.delete()
@@ -879,15 +873,11 @@ class ForgotPasswordSerializer(serializers.Serializer):
         """
 
         try:
-            resend.api_key = settings.RESEND_API_KEY
-
-            resend.Emails.send({
-                "from": settings.RESEND_FROM_EMAIL,
-                "to": [user.email],
-                "subject": subject,
-                "html": html_body,
-                "text": text_body,
-            })
+            send_gmail_email(
+                subject=subject,
+                message=text_body,
+                recipient=user.email,
+            )
 
         except Exception as error:
             otp.delete()
@@ -1149,14 +1139,11 @@ class ResendVerificationOTPSerializer(serializers.Serializer):
         )
 
         try:
-            resend.api_key = settings.RESEND_API_KEY
-
-            resend.Emails.send({
-                "from": settings.RESEND_FROM_EMAIL,
-                "to": [user.email],
-                "subject": subject,
-                "text": text_body,
-            })
+            send_gmail_email(
+                subject=subject,
+                message=text_body,
+                recipient=user.email,
+            )
 
         except Exception as error:
             verification_otp.delete()

@@ -265,13 +265,16 @@ SIMPLE_JWT = {
     "USER_ID_CLAIM": "user_id",
 }
 
+GMAIL_CLIENT_ID = os.environ["GMAIL_CLIENT_ID"]
+GMAIL_CLIENT_SECRET = os.environ["GMAIL_CLIENT_SECRET"]
+GMAIL_REFRESH_TOKEN = os.environ["GMAIL_REFRESH_TOKEN"]
 
-RESEND_API_KEY = os.environ["RESEND_API_KEY"]
-
-RESEND_FROM_EMAIL = os.getenv(
-    "RESEND_FROM_EMAIL",
-    "G-Class Lounge <onboarding@resend.dev>"
+GMAIL_FROM_EMAIL = os.getenv(
+    "GMAIL_FROM_EMAIL",
+    "rohitdhiman20033@gmail.com",
 )
+
+
 
 
 
