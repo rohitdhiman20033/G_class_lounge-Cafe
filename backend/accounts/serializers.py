@@ -148,6 +148,8 @@ class UserSerializer(serializers.ModelSerializer):
             "role",
             "is_verified",
             "is_admin",
+            "is_staff",
+            "is_superuser",
             "date_joined",
         )
         read_only_fields = fields
