@@ -147,6 +147,12 @@ function initializeAuthNavbar() {
     const mobileAdminLink =
         document.getElementById("mobile-admin-link");
 
+    const desktopDjangoAdminLink =
+        document.getElementById("desktop-django-admin-link");
+
+    const mobileDjangoAdminLink =
+        document.getElementById("mobile-django-admin-link");
+
     const isLoggedIn = Boolean(accessToken && currentUser);
 
     if (isLoggedIn) {
@@ -182,12 +188,28 @@ function initializeAuthNavbar() {
             currentUser.is_staff === true ||
             currentUser.is_superuser === true;
 
+        const canAccessDjangoAdmin =
+            currentUser.is_staff === true ||
+            currentUser.is_superuser === true;
+
+
+        // Existing Admin Dashboard
         if (isAdmin) {
             desktopAdminLink?.classList.remove("hidden");
             desktopAdminLink?.classList.add("block");
 
             mobileAdminLink?.classList.remove("hidden");
             mobileAdminLink?.classList.add("block");
+        }
+
+
+        // Django Admin
+        if (canAccessDjangoAdmin) {
+            desktopDjangoAdminLink?.classList.remove("hidden");
+            desktopDjangoAdminLink?.classList.add("block");
+
+            mobileDjangoAdminLink?.classList.remove("hidden");
+            mobileDjangoAdminLink?.classList.add("block");
         }
 
     } else {
@@ -249,7 +271,7 @@ document.addEventListener("click", function (e) {
 });
 
 document.getElementById("desktop-logout-button")
-?.addEventListener("click", logoutUser);
+    ?.addEventListener("click", logoutUser);
 
 document.getElementById("mobile-logout-button")
-?.addEventListener("click", logoutUser);
+    ?.addEventListener("click", logoutUser);
