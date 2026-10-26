@@ -5,18 +5,18 @@ const CHANGE_PASSWORD_STORAGE_KEYS = {
 };
 
 
-// ========================================
+        
 // ELEMENT HELPER
-// ========================================
+        
 
 function getChangePasswordElement(id) {
     return document.getElementById(id);
 }
 
 
-// ========================================
+        
 // SESSION
-// ========================================
+        
 
 function clearChangePasswordSession() {
     localStorage.removeItem(
@@ -45,9 +45,9 @@ function logoutFromChangePasswordPage() {
 }
 
 
-// ========================================
+        
 // MESSAGE
-// ========================================
+        
 
 function showChangePasswordMessage(
     message,
@@ -109,9 +109,9 @@ function hideChangePasswordMessage() {
 }
 
 
-// ========================================
+        
 // BUTTON LOADING
-// ========================================
+        
 
 function setChangePasswordLoading(isLoading) {
     const button =
@@ -142,9 +142,9 @@ function setChangePasswordLoading(isLoading) {
 }
 
 
-// ========================================
+        
 // PASSWORD TOGGLE
-// ========================================
+        
 
 function initializePasswordToggles() {
     document
@@ -193,9 +193,9 @@ function initializePasswordToggles() {
 }
 
 
-// ========================================
+        
 // PASSWORD RULES
-// ========================================
+        
 
 function getPasswordRules(password) {
     return {
@@ -371,9 +371,9 @@ function updatePasswordStrength() {
 }
 
 
-// ========================================
+        
 // PASSWORD MATCH
-// ========================================
+        
 
 function updatePasswordMatch() {
     const newPassword =
@@ -422,9 +422,9 @@ function updatePasswordMatch() {
 }
 
 
-// ========================================
+        
 // VALIDATION
-// ========================================
+        
 
 function validateChangePasswordForm() {
     const currentPassword =
@@ -494,9 +494,9 @@ function validateChangePasswordForm() {
 }
 
 
-// ========================================
+        
 // SUBMIT
-// ========================================
+        
 
 async function handleChangePasswordSubmit(event) {
     event.preventDefault();
@@ -567,9 +567,9 @@ async function handleChangePasswordSubmit(event) {
 }
 
 
-// ========================================
+        
 // INITIALIZE
-// ========================================
+        
 
 document.addEventListener(
     "DOMContentLoaded",
